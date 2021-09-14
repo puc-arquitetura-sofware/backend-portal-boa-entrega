@@ -1,0 +1,17 @@
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.Data.deps.json
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.Data.dll
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\ref\GSL.Cadastro.Data.dll
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.Data.pdb
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.csproj.AssemblyReference.cache
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.AssemblyInfoInputs.cache
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.AssemblyInfo.cs
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.csproj.CoreCompileInputs.cache
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.dll
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\ref\GSL.Cadastro.Data.dll
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.pdb
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.Dominio.dll
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.SharedKernel.dll
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.Dominio.pdb
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\bin\Debug\net5.0\GSL.Cadastro.SharedKernel.pdb
+C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Data\obj\Debug\net5.0\GSL.Cadastro.Data.csproj.CopyComplete

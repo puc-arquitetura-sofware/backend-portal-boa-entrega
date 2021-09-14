@@ -1,0 +1,288 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro\\GSL.Cadastro.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Data\\GSL.Cadastro.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Data\\GSL.Cadastro.Data.csproj",
+        "projectName": "GSL.Cadastro.Data",
+        "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Data\\GSL.Cadastro.Data.csproj",
+        "packagesPath": "C:\\Users\\dgmodesto\\.nuget\\packages\\",
+        "outputPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dgmodesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj": {
+                "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj"
+              },
+              "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj": {
+                "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj",
+        "projectName": "GSL.Cadastro.Dominio",
+        "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj",
+        "packagesPath": "C:\\Users\\dgmodesto\\.nuget\\packages\\",
+        "outputPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dgmodesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj": {
+                "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
+        "projectName": "GSL.Cadastro.SharedKernel",
+        "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\dgmodesto\\.nuget\\packages\\",
+        "outputPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dgmodesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro\\GSL.Cadastro.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro\\GSL.Cadastro.Api.csproj",
+        "projectName": "GSL.Cadastro.Api",
+        "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro\\GSL.Cadastro.Api.csproj",
+        "packagesPath": "C:\\Users\\dgmodesto\\.nuget\\packages\\",
+        "outputPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dgmodesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Data\\GSL.Cadastro.Data.csproj": {
+                "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Data\\GSL.Cadastro.Data.csproj"
+              },
+              "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj": {
+                "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Dominio\\GSL.Cadastro.Dominio.csproj"
+              },
+              "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj": {
+                "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.14, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
