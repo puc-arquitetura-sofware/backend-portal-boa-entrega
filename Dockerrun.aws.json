@@ -1,5 +1,5 @@
 {
-  "AWSEBDockerrunVersion": 1,
+  "AWSEBDockerrunVersion": 2,
   "Image": {
     "Name": "447672992962.dkr.ecr.us-east-2.amazonaws.com/boaentrega-cadastro:latest",
     "Update": "true"
