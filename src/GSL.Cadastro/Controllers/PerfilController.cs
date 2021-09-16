@@ -35,15 +35,15 @@ namespace GSL.Cadastro.Api.Controllers
 
             var listPerfis = new List<PerfilViewModel>();
 
-            listPerfis.Add(new PerfilViewModel(
-                Guid.Parse("5fa163ae-dc8a-481e-a829-3ecd0b096121"),
-                "Cliente"                
-                ));
+            //listPerfis.Add(new PerfilViewModel(
+            //    Guid.Parse("5fa163ae-dc8a-481e-a829-3ecd0b096121"),
+            //    "Cliente"                
+            //    ));
 
-            listPerfis.Add(new PerfilViewModel(
-                Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096122"),
-                "Fornecedor"
-                ));
+            //listPerfis.Add(new PerfilViewModel(
+            //    Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096122"),
+            //    "Fornecedor"
+            //    ));
 
             foreach (var perfil in perfis)
             {
@@ -74,9 +74,22 @@ namespace GSL.Cadastro.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         public async Task<IActionResult> Salvar([FromBody] PerfilViewModel perfilViewModel)
         {
-            var perfil = MapperUtil.MapperPerfilViewModelToPerfil(perfilViewModel);
+            //var perfil = MapperUtil.MapperPerfilViewModelToPerfil(perfilViewModel);
+
+            var perfil = MapperUtil.MapperPerfilViewModelToPerfil(new PerfilViewModel(
+                Guid.Parse("5fa163ae-dc8a-481e-a829-3ecd0b096121"),
+                "Cliente"
+                ));
+
+            var perfil2 = MapperUtil.MapperPerfilViewModelToPerfil(new PerfilViewModel(
+                Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096122"),
+                "Fornecedor"
+                ));
+
+
 
             await _perfilRepository.AdicionarAsync(perfil);
+            await _perfilRepository.AdicionarAsync(perfil2);
 
             return CustomResponse(MapperUtil.MapperPerfilToPerfilViewModel(perfil));
         }

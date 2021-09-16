@@ -16,7 +16,7 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
 
         //EF Relational
         public Guid UsuarioId { get; set; }
-        [JsonIgnore]
-        public virtual Usuario Usuario { get; protected set; }
+        //[JsonIgnore]
+        //public virtual Usuario Usuario { get; protected set; }
     }
 }

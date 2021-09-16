@@ -648,11 +648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
+      "projectUniqueName": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
       "projectName": "GSL.Cadastro.SharedKernel",
-      "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
+      "projectPath": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
       "packagesPath": "C:\\Users\\dgmodesto\\.nuget\\packages\\",
-      "outputPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\obj\\",
+      "outputPath": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dgmodesto\\AppData\\Roaming\\NuGet\\NuGet.Config",

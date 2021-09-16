@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FMoE3smLWWiXNEQ9LuMhsEUw7XEXl+ry4KfF/G7TL5/MTrOdNUd4CZIu79Xp4uv857gwsHhyOyRIYJrYCF6cMQ==",
+  "dgSpecHash": "nx0hRlmtUdmk7XL1YyX+/2UiGFs+Fcl4VQ5Dp3d6hOsiwTvHE3h9P82tbkcwxxIOTaQWBdpn3aHhhz3myHPakw==",
   "success": true,
-  "projectFilePath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
+  "projectFilePath": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.SharedKernel\\GSL.Cadastro.SharedKernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dgmodesto\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
     "C:\\Users\\dgmodesto\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.9\\microsoft.entityframeworkcore.5.0.9.nupkg.sha512",

@@ -38,14 +38,14 @@ namespace GSL.Cadastro.Api.Controllers
 
             var listUsuario = new List<UsuarioViewModel>();
 
-            listUsuario.Add(new UsuarioViewModel(
-                "Douglas",
-                "d.modesto@boaentrega.com.br",
-                "34189871842",
-                false,
-                false,
-                new EnderecoViewModel("Rua dois", "40", "Casa", "Jardim Itapolis", "03938172", "São Paulo", "SP")
-                ));
+            //listUsuario.Add(new UsuarioViewModel(
+            //    "Douglas",
+            //    "d.modesto@boaentrega.com.br",
+            //    "34189871842",
+            //    false,
+            //    false,
+            //    new EnderecoViewModel("Rua dois", "40", "Casa", "Jardim Itapolis", "03938172", "São Paulo", "SP")
+            //    ));
 
             foreach (var usuario in usuarios)
             {
@@ -56,8 +56,7 @@ namespace GSL.Cadastro.Api.Controllers
 
         }
 
-
-        [HttpGet(":id")]
+        [HttpGet("id")]
         [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -66,7 +65,7 @@ namespace GSL.Cadastro.Api.Controllers
         public async Task<IActionResult> ObterUsuarioPorId([FromQuery] Guid id)
         {
             var usuario = await _usuarioRepository.ObterPorIdAsync(id);
-            return usuario == null ? NotFound() : CustomResponse(usuario);
+            return usuario == null ? NotFound() : CustomResponse(MapperUtil.MapperUsuarioToUsuarioViewModel(usuario));
         }
 
         [HttpPost("nova-conta")]
@@ -77,13 +76,15 @@ namespace GSL.Cadastro.Api.Controllers
         public async Task<IActionResult> Salvar([FromBody] UsuarioViewModel usuarioViewModel)
         {
             var usuario = MapperUtil.MapperUsuarioViewModelToUsuario(usuarioViewModel);
+            var perfil = await _perfilRepository.ObterPorIdAsync(Guid.Parse(usuarioViewModel.Perfil));
+            usuario.AtribuirPerfil(perfil);
 
             await _usuarioRepository.AdicionarAsync(usuario);
             var usuarioNovo = await _usuarioRepository.ObterPorCpfAsync(usuarioViewModel.CpfCnpj);
             return CustomResponse(MapperUtil.MapperUsuarioToUsuarioViewModel(usuarioNovo));
         }
 
-        [HttpPut("/:id")]
+        [HttpPut("/id")]
         [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -105,7 +106,7 @@ namespace GSL.Cadastro.Api.Controllers
             return CustomResponse(MapperUtil.MapperUsuarioToUsuarioViewModel(usuarioAtualizado));
         }
 
-        [HttpGet(":cpfCnpj")]
+        [HttpGet("cpfCnpj")]
         [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -118,7 +119,7 @@ namespace GSL.Cadastro.Api.Controllers
         }
 
 
-        [HttpPut(":usuarioId/:perfilId")]
+        [HttpPut("usuarioId/perfilId")]
         [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]

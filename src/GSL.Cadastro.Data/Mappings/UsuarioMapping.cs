@@ -32,6 +32,10 @@ namespace GSL.Cadastro.Data.Mappings
                 .HasColumnType("date");
 
 
+            builder.Property(c => c.PerfilId)
+                .IsRequired()
+                .HasColumnType("varchar");
+
             builder.OwnsOne(c => c.Documento, tf =>
             {
                 tf.Property(c => c.Numero)
@@ -49,17 +53,16 @@ namespace GSL.Cadastro.Data.Mappings
                     .HasColumnType($"varchar({Email.EnderecoMaxLength})");
             });
 
-
             // 1 : 1 => Usuario: Endereco
             builder.HasOne(c => c.Endereco)
                 .WithOne(c => c.Usuario)
                 .HasForeignKey<Endereco>(x => x.UsuarioId);
 
 
-            // 1 : 1 => Usuario: Perfil
-            builder.HasOne(u => u.Perfil)
-                .WithOne(u => u.Usuario)
-                .HasForeignKey<Perfil>(p => p.UsuarioId);
+            //// 1 : 1 => Usuario: Perfil
+            //builder.HasOne(u => u.Perfil)
+            //    .WithOne(u => u.Usuario)
+            //    .HasForeignKey<Perfil>(p => p.UsuarioId);
 
             builder.ToTable("Usuarios");
         }

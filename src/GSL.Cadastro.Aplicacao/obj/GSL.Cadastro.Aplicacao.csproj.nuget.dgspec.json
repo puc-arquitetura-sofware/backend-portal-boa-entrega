@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj": {}
+    "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj": {}
   },
   "projects": {
-    "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj": {
+    "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj",
+        "projectUniqueName": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj",
         "projectName": "GSL.Cadastro.Aplicacao",
-        "projectPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj",
+        "projectPath": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj",
         "packagesPath": "C:\\Users\\dgmodesto\\.nuget\\packages\\",
-        "outputPath": "C:\\labs\\tcc-puc-minas\\poc-sistema-logistica\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\obj\\",
+        "outputPath": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dgmodesto\\AppData\\Roaming\\NuGet\\NuGet.Config",

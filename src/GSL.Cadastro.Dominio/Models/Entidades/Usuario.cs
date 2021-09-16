@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace GSL.Cadastro.Dominio.Models.Entidades
 {
-    public class Usuario: Entidade
+    public class Usuario : Entidade
     {
         public Usuario(string nome, bool bloqueado, bool ativo, Email email, Endereco endereco)
         {
@@ -22,7 +22,8 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
         public Documento Documento { get; set; }
         public Email Email { get; set; }
         public Endereco Endereco { get; private set; }
-        public Perfil Perfil { get; private set; }
+        public virtual Perfil Perfil { get; private set; }
+        public Guid PerfilId {get; set;}
 
         //EF Constructor
         public Usuario() { }
@@ -35,7 +36,8 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
         }
         public void AtribuirPerfil(Perfil perfil)
         {
-            Perfil = perfil;
+            //Perfil = perfil;
+            PerfilId = perfil.Id;
         }
 
         public void Ativar()

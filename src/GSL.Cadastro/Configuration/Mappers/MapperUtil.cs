@@ -27,7 +27,7 @@ namespace GSL.Cadastro.Api.Configuration.Mappers
         public static UsuarioViewModel MapperUsuarioToUsuarioViewModel(Usuario usuario)
         {
             var endereco = usuario.Endereco.Adapt<EnderecoViewModel>();
-            var usuarioViewModel = new UsuarioViewModel(usuario.Nome, usuario.Email.Endereco, usuario.Documento.Numero, usuario.Bloqueado, usuario.Ativo, endereco);
+            var usuarioViewModel = new UsuarioViewModel(usuario.Nome, usuario.Email.Endereco, usuario.Documento.Numero, usuario.Bloqueado, usuario.Ativo, endereco, usuario.PerfilId.ToString());
             usuarioViewModel.Id = usuario.Id;
             return usuarioViewModel;
         }

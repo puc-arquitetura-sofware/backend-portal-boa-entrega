@@ -31,7 +31,10 @@ namespace GSL.Cadastro.Data.Repositories
         }
 
         public override async Task<Usuario> ObterPorIdAsync(Guid id) =>
-                await _context.Usuarios.Include(x => x.Endereco).FirstOrDefaultAsync(u => u.Id == id);
+                await _context.Usuarios
+                    .Include(x => x.Endereco)
+                    .Include(x => x.Perfil)
+                .FirstOrDefaultAsync(u => u.Id == id);
 
         public async Task<Endereco> ObterEnderecoPorUsuarioIdAsync(Guid id) =>
             await _context.Enderecos.FirstOrDefaultAsync(e => e.UsuarioId == id);
@@ -40,7 +43,10 @@ namespace GSL.Cadastro.Data.Repositories
             await _context.Usuarios.Include(e => e.Endereco).FirstOrDefaultAsync(c => c.Documento.Numero == cpf);
 
         public override async Task<IEnumerable<Usuario>> ObterTodosAsync() =>
-            await _context.Usuarios.Include(e => e.Endereco).AsNoTracking().ToListAsync();
+            await _context
+                .Usuarios.Include(e => e.Endereco)
+                .Include(e => e.Perfil)
+            .AsNoTracking().ToListAsync();
 
         private async Task Commit() =>
             await _context.SaveChangesAsync();

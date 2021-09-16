@@ -8,7 +8,7 @@ namespace GSL.Cadastro.Dominio.Models.ViewModels
 {
     public class UsuarioViewModel
     {
-        public UsuarioViewModel(string nome, string email, string cpfCnpj, bool bloqueado, bool ativo, EnderecoViewModel endereco)
+        public UsuarioViewModel(string nome, string email, string cpfCnpj, bool bloqueado, bool ativo, EnderecoViewModel endereco, string perfil = null)
         {
             Nome = nome;
             Email = email;
@@ -16,6 +16,7 @@ namespace GSL.Cadastro.Dominio.Models.ViewModels
             Bloqueado = bloqueado;
             Ativo = ativo;
             Endereco = endereco;
+            Perfil = perfil;
         }
         public UsuarioViewModel () { }
 

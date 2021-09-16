@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": [ "swagger", "healthchecks-ui"],
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

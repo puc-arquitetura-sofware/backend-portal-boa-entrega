@@ -40,6 +40,7 @@ namespace GSL.Cadastro
             services.AddApiConfiguration(Configuration);
             services.AddCadastroServices();
             services.AddSwaggerConfiguration();
+            services.AddHealthCheckConfiguration(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +48,7 @@ namespace GSL.Cadastro
         {
 
             app.UseSwaggerConfiguration();
+            app.UseHealthCheckConfiguration(env);
 
             app.UseApiConfiguration(env);
         }
