@@ -10,3 +10,14 @@ C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.SharedKernel\obj\D
 C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.dll
 C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\ref\GSL.Cadastro.SharedKernel.dll
 C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.pdb
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\bin\Debug\net5.0\GSL.Cadastro.SharedKernel.deps.json
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\bin\Debug\net5.0\GSL.Cadastro.SharedKernel.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\bin\Debug\net5.0\ref\GSL.Cadastro.SharedKernel.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\bin\Debug\net5.0\GSL.Cadastro.SharedKernel.pdb
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.AssemblyInfoInputs.cache
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.AssemblyInfo.cs
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.csproj.CoreCompileInputs.cache
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\ref\GSL.Cadastro.SharedKernel.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.SharedKernel\obj\Debug\net5.0\GSL.Cadastro.SharedKernel.pdb

@@ -10,3 +10,14 @@ C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Aplicacao\obj\Debu
 C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\ref\GSL.Cadastro.Aplicacao.dll
 C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.pdb
 C:\labs\tcc-puc-minas\GestaoServicoLogistica\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.csproj.AssemblyReference.cache
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\bin\Debug\net5.0\GSL.Cadastro.Aplicacao.deps.json
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\bin\Debug\net5.0\GSL.Cadastro.Aplicacao.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\bin\Debug\net5.0\ref\GSL.Cadastro.Aplicacao.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\bin\Debug\net5.0\GSL.Cadastro.Aplicacao.pdb
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.AssemblyInfoInputs.cache
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.AssemblyInfo.cs
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.csproj.CoreCompileInputs.cache
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\ref\GSL.Cadastro.Aplicacao.dll
+C:\labs\tcc-puc-minas\backend-portal-boa-entrega\src\GSL.Cadastro.Aplicacao\obj\Debug\net5.0\GSL.Cadastro.Aplicacao.pdb

@@ -1,0 +1,13 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "447672992962.dkr.ecr.us-east-2.amazonaws.com/boaentrega-cadastro:latest",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "hostPort": 8080,
+      "containerPort": 8080
+    }
+  ]
+}
