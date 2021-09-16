@@ -1,13 +1,13 @@
 {
-  "AWSEBDockerrunVersion": 3,
+  "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "447672992962.dkr.ecr.us-east-2.amazonaws.com/boaentrega-cadastro:latest",
+    "Name": "akshaylokur/delivery-slot-notifier:latest",
     "Update": "true"
   },
   "Ports": [
     {
-      "hostPort": 80,
-      "ContainerPort": 8080
+      "hostPort": 8080,
+      "containerPort": 8080
     }
   ]
 }
