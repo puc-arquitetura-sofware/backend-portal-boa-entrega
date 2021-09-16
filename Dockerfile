@@ -7,7 +7,7 @@ EXPOSE 80
 EXPOSE 443
 
 
-#Copia tudo para pasta do workdir, faz o restore e copia os pacotes
+#Copia tudo para pasta do workdir, faz o restore e copia pacotes
 COPY . ./
 RUN dotnet publish GestaoServicoLogistica.sln -c Release -o /out
 
