@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SJbvsh1eH14AV9acIRb0MPiPMGrI2d5DMrc1F/ttWHoaJ0v9boJPE8bgb5Sd0KEGlv7S9/zHN+AH5JDDJ+HI2Q==",
+  "dgSpecHash": "cSpWj85T2O+VO0QhfBgXjqwRDG2ojkCdYVCgpAgsNLfM9vUZmR6gog59Yzmufn5hxHdFWb19sLLB1C3y0/C2aQ==",
   "success": true,
-  "projectFilePath": "C:\\labs\\tcc-puc-minas\\backend-portal-boa-entrega\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj",
+  "projectFilePath": "C:\\Projetos\\backend-portal-boa-entrega-cadastro\\src\\GSL.Cadastro.Aplicacao\\GSL.Cadastro.Aplicacao.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

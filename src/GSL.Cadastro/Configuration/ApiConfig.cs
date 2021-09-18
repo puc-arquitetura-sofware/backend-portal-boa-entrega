@@ -40,7 +40,6 @@ namespace GSL.Cadastro.Api.Configuration
             });
 
             services.AddMvc();
-    
         }
 
         public static void UseApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
