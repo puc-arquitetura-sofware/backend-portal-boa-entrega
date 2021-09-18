@@ -9,5 +9,8 @@ namespace GSL.Cadastro.Dominio.Interfaces
 {
     public interface IMercadoriaDepositoRepository : IBaseRepository<MercadoriaDeposito>
     {
+        Task<IEnumerable<Mercadoria>> ObterPorDepositoIdAsync(Guid depositoId);
+        Task<IEnumerable<Mercadoria>> ObterPorClienteIdAsync(Guid clienteId);
+
     }
 }

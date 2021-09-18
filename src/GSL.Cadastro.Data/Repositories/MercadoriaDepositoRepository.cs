@@ -17,5 +17,29 @@ namespace GSL.Cadastro.Data.Repositories
         {
             _context = dbContext;
         }
+
+        public async Task<IEnumerable<Mercadoria>> ObterPorClienteIdAsync(Guid clienteId)
+        {
+            var result = await _context.MercadoriaClientes
+            .Include(x => x.Cliente)
+            .Include(x => x.Mercadoria)
+            .AsNoTracking().ToListAsync();
+
+            return result
+               .Where(u => u.ClienteId == clienteId)
+               .Select(m => m.Mercadoria);
+        }
+
+        public async Task<IEnumerable<Mercadoria>> ObterPorDepositoIdAsync(Guid depositoId)
+        {
+            var result = await _context.MercadoriaDepositos
+            .Include(x => x.Deposito)
+            .Include(x => x.Mercadoria)
+            .AsNoTracking().ToListAsync();
+            
+            return result
+               .Where(u => u.DepositoId == depositoId)
+               .Select(m => m.Mercadoria);
+        }
     }
 }

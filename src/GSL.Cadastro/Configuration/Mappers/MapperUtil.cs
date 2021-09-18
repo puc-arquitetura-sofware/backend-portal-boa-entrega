@@ -20,7 +20,7 @@ namespace GSL.Cadastro.Api.Configuration.Mappers
             usuario.AtribuirEndereco(usuarioViewModel.Endereco.Adapt<Endereco>());
             usuario.Documento = new Documento(usuarioViewModel.CpfCnpj);
             usuario.Email = new Email(usuarioViewModel.Email);
-
+            usuario.PerfilId = Guid.Parse(usuarioViewModel.Perfil);
 
             return usuario;
         }

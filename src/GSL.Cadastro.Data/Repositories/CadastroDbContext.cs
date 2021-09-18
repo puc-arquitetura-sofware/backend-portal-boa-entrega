@@ -26,6 +26,7 @@ namespace GSL.Cadastro.Data.Repositories
         public DbSet<MercadoriaDeposito> MercadoriaDepositos { get; set; }
         public DbSet<Mercadoria> Mercadorias { get; set; }
         public DbSet<MercadoriaFornecedor> MercadoriaFornecedores { get; set; }
+        public DbSet<MercadoriaCliente> MercadoriaClientes { get; set; }
 
 
 

@@ -70,10 +70,34 @@ namespace GSL.Cadastro.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
-        public async Task<IActionResult> ObterUsuarioPorId([FromQuery] Guid id)
+        public async Task<IActionResult> ObterMercadoriaPorId([FromQuery] Guid id)
         {
-            var usuario = await _mercadoriaRepository.ObterPorIdAsync(id);
-            return usuario == null ? NotFound() : CustomResponse(usuario);
+            var mercadoria = await _mercadoriaRepository.ObterPorIdAsync(id);
+            return mercadoria == null ? NotFound() : CustomResponse(mercadoria);
+        }
+
+        [HttpGet("obter-por-deposito")]
+        [ProducesResponseType(typeof(MercadoriaViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
+        public async Task<IActionResult> ObterMercadoriaPorDepositoId([FromQuery] Guid depositoId)
+        {
+            var mercadoria = await _mercadoriaRepository.ObterPorDepositoIdAsync(depositoId);
+            return mercadoria == null ? NotFound() : CustomResponse(mercadoria);
+        }
+
+        [HttpGet("obter-por-cliente")]
+        [ProducesResponseType(typeof(MercadoriaViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
+        public async Task<IActionResult> ObterMercadoriaPorClienteId([FromQuery] Guid clienteId)
+        {
+            var mercadoria = await _mercadoriaRepository.ObterPorClienteIdAsync(clienteId);
+            return mercadoria == null ? NotFound() : CustomResponse(mercadoria);
         }
 
         [HttpPost()]
@@ -125,35 +149,6 @@ namespace GSL.Cadastro.Api.Controllers
             return CustomResponse(MapperUtil.MapperMercadoriaToMercadoriaViewModel(depositoExist));
         }
 
-
-        [HttpPost("mercadoriaId/depositoId")]
-        [ProducesResponseType(typeof(MercadoriaDepositoViewModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
-        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
-        public async Task<IActionResult> VincularMercadoriaDeposito([FromQuery] Guid mercadoriaId, [FromQuery] Guid depositoId, [FromQuery] int quantidade)
-        {
-            var mercadoriaExist = await _mercadoriaRepository.ObterPorIdAsync(mercadoriaId);
-
-            if (mercadoriaExist == null)
-                throw new NullReferenceException($"a propriedade { nameof(mercadoriaId) } deve ser informada");
-
-            var depositoExist = await _depositoRepository.ObterPorIdAsync(depositoId);
-
-            if (depositoExist == null)
-                throw new NullReferenceException($"a propriedade { nameof(depositoId) } deve ser informada");
-
-
-            //TODO: Inserir Relação entre Mercadoria e Deposito
-            var md = new MercadoriaDeposito(mercadoriaExist.Id, depositoExist.Id, quantidade);
-            await _mercadoriaDepositoRepository.AdicionarAsync(md);
-
-
-            var mercadoriViewModel = MapperUtil.MapperMercadoriaToMercadoriaViewModel(mercadoriaExist);
-            var depositoViewModel = MapperUtil.MapperDepositoToDepositoViewModel(depositoExist);
-            return CustomResponse(new MercadoriaDepositoViewModel(mercadoriViewModel, depositoViewModel));
-        }
 
 
         [HttpPost("mercadoriaId/fornecedorId")]

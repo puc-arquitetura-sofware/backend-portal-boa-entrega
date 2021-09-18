@@ -19,11 +19,19 @@ namespace GSL.Cadastro.Api.Controllers
     {
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IPerfilRepository _perfilRepository;
+        private readonly IMercadoriaClienteRepository _mercadoriaClienteRepository;
+        private readonly IMercadoriaRepository _mercadoriaRepository;
 
-        public UsuarioController(IUsuarioRepository clienteRepository, IPerfilRepository perfilRepository)
+        public UsuarioController(
+            IUsuarioRepository clienteRepository,
+            IPerfilRepository perfilRepository,
+            IMercadoriaClienteRepository mercadoriaClienteRepository, 
+            IMercadoriaRepository mercadoriaRepository)
         {
             _usuarioRepository = clienteRepository;
             _perfilRepository = perfilRepository;
+            _mercadoriaClienteRepository = mercadoriaClienteRepository;
+            _mercadoriaRepository = mercadoriaRepository;
         }
 
         [HttpGet()]
@@ -84,7 +92,7 @@ namespace GSL.Cadastro.Api.Controllers
             return CustomResponse(MapperUtil.MapperUsuarioToUsuarioViewModel(usuarioNovo));
         }
 
-        [HttpPut("/id")]
+        [HttpPut("id")]
         [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
@@ -119,13 +127,13 @@ namespace GSL.Cadastro.Api.Controllers
         }
 
 
-        [HttpPut("usuarioId/perfilId")]
+        [HttpPut("vincular-perfil")]
         [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
-        public async Task<IActionResult> VincularMercadoriaDeposito([FromQuery] Guid usuarioId, [FromQuery] Guid perfilId)
+        public async Task<IActionResult> VincularUsuarioPerfil([FromQuery] Guid usuarioId, [FromQuery] Guid perfilId)
         {
             var usuarioExist = await _usuarioRepository.ObterPorIdAsync(usuarioId);
 
@@ -145,6 +153,34 @@ namespace GSL.Cadastro.Api.Controllers
             return CustomResponse(usuarioViewModel);
         }
 
+        [HttpPost("vincular-mercadoria")]
+        [ProducesResponseType(typeof(MercadoriaClienteViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
+        public async Task<IActionResult> VincularMercadoriaCliente([FromQuery] Guid mercadoriaId, [FromQuery] Guid clienteId)
+        {
+            var mercadoriaExist = await _mercadoriaRepository.ObterPorIdAsync(mercadoriaId);
+
+            if (mercadoriaExist == null)
+                throw new NullReferenceException($"a propriedade { nameof(mercadoriaId) } deve ser informada");
+
+            var clienteExist = await _usuarioRepository.ObterPorIdAsync(clienteId);
+
+            if (clienteExist == null)
+                throw new NullReferenceException($"a propriedade { nameof(clienteId) } deve ser informada");
+
+
+            //TODO: Inserir Relação entre Mercadoria e Deposito
+            var md = new MercadoriaCliente(mercadoriaExist.Id, clienteExist.Id);
+            await _mercadoriaClienteRepository.AdicionarAsync(md);
+
+
+            var mercadoriViewModel = MapperUtil.MapperMercadoriaToMercadoriaViewModel(mercadoriaExist);
+            var usuarioViewModel = MapperUtil.MapperUsuarioToUsuarioViewModel(clienteExist);
+            return CustomResponse(new MercadoriaClienteViewModel(mercadoriViewModel, usuarioViewModel));
+        }
 
         [HttpPost("entrar")]
         [ProducesResponseType(typeof(LoginViewModel), (int)HttpStatusCode.OK)]

@@ -20,10 +20,17 @@ namespace GSL.Cadastro.Api.Controllers
     public class DepositoController : MainController
     {
         private readonly IDepositoRepository _depositoRepository;
+        private readonly IMercadoriaDepositoRepository _mercadoriaDepositoRepository;
+        private readonly IMercadoriaRepository _mercadoriaRepository;
 
-        public DepositoController(IDepositoRepository depositoRepository)
+        public DepositoController(
+            IDepositoRepository depositoRepository,
+            IMercadoriaDepositoRepository mercadoriaDepositoRepository, 
+            IMercadoriaRepository mercadoriaRepository)
         {
             _depositoRepository = depositoRepository;
+            _mercadoriaDepositoRepository = mercadoriaDepositoRepository;
+            _mercadoriaRepository = mercadoriaRepository;
         }
 
 
@@ -149,6 +156,36 @@ namespace GSL.Cadastro.Api.Controllers
             await _depositoRepository.AtualizarEnderecoAsync(enderecoDepositoExist);
 
             return CustomResponse(MapperUtil.MapperDepositoToDepositoViewModel(enderecoDepositoExist));
+        }
+
+
+        [HttpPost("vincular-mercadoria")]
+        [ProducesResponseType(typeof(MercadoriaDepositoViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
+        public async Task<IActionResult> VincularMercadoriaDeposito([FromQuery] Guid mercadoriaId, [FromQuery] Guid depositoId, [FromQuery] int quantidade)
+        {
+            var mercadoriaExist = await _mercadoriaRepository.ObterPorIdAsync(mercadoriaId);
+
+            if (mercadoriaExist == null)
+                throw new NullReferenceException($"a propriedade { nameof(mercadoriaId) } deve ser informada");
+
+            var depositoExist = await _depositoRepository.ObterPorIdAsync(depositoId);
+
+            if (depositoExist == null)
+                throw new NullReferenceException($"a propriedade { nameof(depositoId) } deve ser informada");
+
+
+            //TODO: Inserir Relação entre Mercadoria e Deposito
+            var md = new MercadoriaDeposito(mercadoriaExist.Id, depositoExist.Id, quantidade);
+            await _mercadoriaDepositoRepository.AdicionarAsync(md);
+
+
+            var mercadoriViewModel = MapperUtil.MapperMercadoriaToMercadoriaViewModel(mercadoriaExist);
+            var depositoViewModel = MapperUtil.MapperDepositoToDepositoViewModel(depositoExist);
+            return CustomResponse(new MercadoriaDepositoViewModel(mercadoriViewModel, depositoViewModel));
         }
 
     }

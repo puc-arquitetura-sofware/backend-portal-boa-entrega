@@ -17,5 +17,7 @@ namespace GSL.Cadastro.Data.Repositories
         {
             _context = dbContext;
         }
+
+
     }
 }
