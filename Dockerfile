@@ -4,6 +4,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
 
 #Copia tudo para pasta do workdir, faz o restore e copia os pacotes
@@ -17,6 +18,6 @@ WORKDIR /app
 COPY --from=build-env /out .
 
 
-EXPOSE 80
+EXPOSE 44365
 ENTRYPOINT ["dotnet", "GSL.Cadastro.Api.dll"]
 
