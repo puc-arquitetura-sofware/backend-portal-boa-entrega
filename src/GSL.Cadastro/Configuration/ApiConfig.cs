@@ -55,6 +55,8 @@ namespace GSL.Cadastro.Api.Configuration
             app.UseRouting();
 
             app.UseCors("Total");
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

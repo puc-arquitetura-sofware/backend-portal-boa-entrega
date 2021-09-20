@@ -44,5 +44,22 @@ namespace GSL.Cadastro.Data.Repositories
 
             return result;
         }
+
+        public async Task<IEnumerable<Mercadoria>> ObterTodasMercadoriasParaEntregasAsync()
+        {
+            var result = await _context.Mercadorias
+                  .Include(m => m.MercadoriaDepositos)
+                  .ThenInclude(d => d.Deposito)
+                    .ThenInclude(e => e.EnderecoDeposito)
+                  .Include(m => m.MercadoriaClientes)
+                  .ThenInclude(c => c.Cliente)
+                    .ThenInclude(e => e.Endereco)
+                  .AsNoTracking()
+                  .ToListAsync();
+
+
+
+            return result;
+        }
     }
 }

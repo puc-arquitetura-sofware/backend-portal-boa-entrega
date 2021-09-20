@@ -46,10 +46,10 @@ namespace GSL.Cadastro.Api.Controllers
 
             var listDepositos = new List<DepositoViewModel>();
 
-            listDepositos.Add(new DepositoViewModel(
-                "Galpão",
-                new EnderecoDepositoViewModel("Rua dois", "40", "Casa", "Jardim Itapolis", "03938172", "São Paulo", "SP")
-                ));
+            //listDepositos.Add(new DepositoViewModel(
+            //    "Galpão",
+            //    new EnderecoDepositoViewModel("Rua dois", "40", "Casa", "Jardim Itapolis", "03938172", "São Paulo", "SP")
+            //    ));
 
             foreach (var deposito in depositos)
             {

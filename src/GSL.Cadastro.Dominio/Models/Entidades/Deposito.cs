@@ -1,12 +1,14 @@
 ﻿using GSL.Cadastro.SharedKernel.DomainObjects;
+using System;
 using System.Collections.Generic;
 
 namespace GSL.Cadastro.Dominio.Models.Entidades
 {
     public class Deposito : Entidade, IAggregateRoot
     {
-        public Deposito(string tipo, EnderecoDeposito endereco)
+        public Deposito(string tipo, EnderecoDeposito endereco, Guid id)
         {
+            Id = id;
             Tipo = tipo;
             EnderecoDeposito = endereco;
         }

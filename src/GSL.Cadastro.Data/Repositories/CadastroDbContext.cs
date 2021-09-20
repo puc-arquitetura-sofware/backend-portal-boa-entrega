@@ -2,6 +2,7 @@
 using GSL.Cadastro.SharedKernel.DomainObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using System;
 using System.Linq;
 
 namespace GSL.Cadastro.Data.Repositories
@@ -15,8 +16,8 @@ namespace GSL.Cadastro.Data.Repositories
             : base(options)
         {
             //Database.EnsureCreated();
-            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-            ChangeTracker.AutoDetectChangesEnabled = false;
+            //ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            //ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
@@ -36,6 +37,7 @@ namespace GSL.Cadastro.Data.Repositories
             modelBuilder.Ignore<Cpf>();
             modelBuilder.Ignore<Cnpj>();
             modelBuilder.Ignore<Email>();
+
 
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))

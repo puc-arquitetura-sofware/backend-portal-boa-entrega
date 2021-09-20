@@ -6,13 +6,28 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
 {
     public class Usuario : Entidade
     {
-        public Usuario(string nome, bool bloqueado, bool ativo, Email email, Endereco endereco)
+        public Usuario(string nome, bool bloqueado, bool ativo, Email email, Endereco endereco, Guid perfilId, Guid id)
         {
+            Id = id;
+            PerfilId = perfilId;
             Nome = nome;
             Bloqueado = bloqueado;
             Ativo = ativo;
             Email = email;
             Endereco = endereco;
+        }
+
+        public Usuario(string nome, bool bloqueado, bool ativo, string password, Documento documento , Email email, Endereco endereco, Guid perfilId, Guid id)
+        {
+            Id = id;
+            PerfilId = perfilId;
+            Nome = nome;
+            Bloqueado = bloqueado;
+            Ativo = ativo;
+            Email = email;
+            Documento = documento;
+            Endereco = endereco;
+            Password = password;
         }
 
         public string Nome { get; private set; }

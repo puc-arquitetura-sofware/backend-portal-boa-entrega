@@ -5,8 +5,9 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
 {
     public class EnderecoDeposito : Entidade, IAggregateRoot
     {
-        public EnderecoDeposito(string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado)
+        public EnderecoDeposito(string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado, Guid id)
         {
+            Id = id;
             Logradouro = logradouro;
             Numero = numero;
             Complemento = complemento;
@@ -18,7 +19,6 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
 
         // EF Constructor
         public EnderecoDeposito() { }
-
 
 
         //EF Relational
@@ -39,5 +39,9 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
             return true;
         }
 
+        public override string ToString()
+        {
+            return $"{Logradouro}, {Numero} - {Bairro}, {Cidade} - {Estado}";
+        }
     }
 }

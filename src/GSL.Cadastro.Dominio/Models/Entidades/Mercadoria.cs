@@ -6,13 +6,13 @@ namespace GSL.Cadastro.Dominio.Models.Entidades
 {
     public class Mercadoria: Entidade, IAggregateRoot
     {
-        public Mercadoria(string nome, string descricao, double valor, bool ativo, Guid fornecedorId)
+        public Mercadoria(string nome, string descricao, double valor, bool ativo, Guid id)
         {
+            Id = id;
             Nome = nome;
             Descricao = descricao;
             Valor = valor;
             Ativo = ativo;
-            FornecedorId = fornecedorId;
         }
 
         public Mercadoria() { }

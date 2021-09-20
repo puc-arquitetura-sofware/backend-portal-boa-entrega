@@ -11,5 +11,6 @@ namespace GSL.Cadastro.Dominio.Interfaces
     {
         Task<IEnumerable<Mercadoria>> ObterPorDepositoIdAsync(Guid depositoId);
         Task<IEnumerable<Mercadoria>> ObterPorClienteIdAsync(Guid clienteId);
+        Task<IEnumerable<Mercadoria>> ObterTodasMercadoriasParaEntregasAsync(); 
     }
 }
