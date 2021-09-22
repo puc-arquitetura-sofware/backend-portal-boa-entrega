@@ -51,8 +51,8 @@ namespace GSL.Cadastro.Api.Controllers
 
             var listMercadorias = new List<MercadoriaViewModel>();
 
-            var mercadoriaMock = new MercadoriaViewModel("mouse", "mouse mecanico dragon", 250.00, true, Guid.NewGuid());
-            listMercadorias.Add(mercadoriaMock);
+            //var mercadoriaMock = new MercadoriaViewModel("mouse", "mouse mecanico dragon", 250.00, true, Guid.NewGuid());
+            //listMercadorias.Add(mercadoriaMock);
 
             foreach (var mercadoria in mercadorias)
             {
