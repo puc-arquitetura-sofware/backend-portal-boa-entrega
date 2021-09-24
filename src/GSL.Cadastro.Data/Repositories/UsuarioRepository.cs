@@ -42,6 +42,10 @@ namespace GSL.Cadastro.Data.Repositories
         public async Task<Usuario> ObterPorCpfAsync(string cpf) =>
             await _context.Usuarios.Include(e => e.Endereco).FirstOrDefaultAsync(c => c.Documento.Numero == cpf);
 
+        public async Task<Usuario> ObterPorEmailAsync(string email) =>
+            await _context.Usuarios.Include(e => e.Endereco).FirstOrDefaultAsync(c => c.Email.Endereco == email);
+
+
         public override async Task<IEnumerable<Usuario>> ObterTodosAsync() =>
             await _context
                 .Usuarios.Include(e => e.Endereco)

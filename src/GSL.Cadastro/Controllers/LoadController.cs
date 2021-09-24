@@ -24,7 +24,7 @@ namespace GSL.Cadastro.Api.Controllers
             IPerfilRepository perfilRepository,
             IMercadoriaRepository mercadoriaRepository,
             IDepositoRepository depositoRepository,
-            IMercadoriaDepositoRepository mercadoriaDepositoRepository, 
+            IMercadoriaDepositoRepository mercadoriaDepositoRepository,
             IMercadoriaClienteRepository mercadoriaClienteRepository)
         {
             _usuarioRepository = usuarioRepository;
@@ -51,10 +51,10 @@ namespace GSL.Cadastro.Api.Controllers
 
         private async Task adicionarPerfis()
         {
-            
+
             await _perfilRepository.AdicionarAsync(new Perfil
             {
-                Id = Guid.Parse("5fa163ae-dc8a-481e-a829-3ecd0b096121"),
+                Id = Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096121"),
                 Descricao = "Cliente",
                 Ativo = true,
                 AtualizadoEm = DateTime.UtcNow,
@@ -68,33 +68,68 @@ namespace GSL.Cadastro.Api.Controllers
                 AtualizadoEm = DateTime.UtcNow,
                 CriadoEm = DateTime.UtcNow
             });
+
+            await _perfilRepository.AdicionarAsync(new Perfil
+            {
+                Id = Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096123"),
+                Descricao = "Colaborador",
+                Ativo = true,
+                AtualizadoEm = DateTime.UtcNow,
+                CriadoEm = DateTime.UtcNow
+            });
+
         }
 
         private async Task adicionarUsuarios()
         {
+
             await _usuarioRepository.AdicionarAsync(new Usuario(
                         "Douglas Gomes Modesto",
                         false,
                         true,
                         "senha@123",
                         new Documento("82207743047"),
-                        new Email("douglasgomesmodesto@gmail.com."),
+                        new Email("douglasgomesmodesto@gmail.com"),
                         new Endereco("Rua Barão Amaral de Cabo frio", "50", "Casa", "Jardim Itápolis", "03938172", "São Paulo", "São Paulo", Guid.Parse("327e4f13-d07d-4a6b-a299-b652367e4d32")),
-                        Guid.Parse("5fa163ae-dc8a-481e-a829-3ecd0b096121"),
+                        Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096121"),
                         Guid.Parse("84b3003d-a0f7-49bc-bb18-45a8d4269f24")
                     ));
 
             await _usuarioRepository.AdicionarAsync(new Usuario(
-                        "Pablo Christian Pereira Nazareth",
+                        "Jose da Silva",
                         false,
                         true,
                         "senha@123",
                         new Documento("88261494020"),
-                        new Email("pablo.christian@gmail.com."),
+                        new Email("cliente@boaentrega.com.br"),
                         new Endereco("Av. Brasil", "2.023", " Prédio 1 - Edifício Dom Cabral", "Funcionários", "30140002", "Belo Horizonte", "Minas Gerais", Guid.Parse("327e4f13-d07d-4a6b-a299-b652367e4d33")),
-                        Guid.Parse("5fa163ae-dc8a-481e-a829-3ecd0b096121"),
+                        Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096121"),
                         Guid.Parse("84b3003d-a0f7-49bc-bb18-45a8d4269f25")
                     ));
+
+            await _usuarioRepository.AdicionarAsync(new Usuario(
+                "José de Oliveira - Colaborador",
+                false,
+                true,
+                "senha@123",
+                new Documento("90669626074"),
+                new Email("colaborador@boaentrega.com.br"),
+                new Endereco("Avenida Paulisa", "1000", "Edificio Tower", "Centro", "", "São Paulo", "São Paulo", Guid.Parse("327e4f13-d07d-4a6b-a299-b652367e4d34")),
+                Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096123"),
+                Guid.Parse("84b3003d-a0f7-49bc-bb18-45a8d4269f26")
+            ));
+
+            await _usuarioRepository.AdicionarAsync(new Usuario(
+                "Pablo Christian Pereira Nazareth - Colaborador",
+                false,
+                true,
+                "senha@123",
+                new Documento("08337715073"),
+                new Email("snakepablo@hotmail.com"),
+                new Endereco("Avenida Paulisa", "1000", "Edificio Tower", "Centro", "", "São Paulo", "São Paulo", Guid.Parse("327e4f13-d07d-4a6b-a299-b652367e4d35")),
+                Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096123"),
+                Guid.Parse("84b3003d-a0f7-49bc-bb18-45a8d4269f27")
+            ));
         }
 
         private async Task adicionarMercadorias()

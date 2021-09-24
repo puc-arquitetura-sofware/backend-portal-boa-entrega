@@ -1,4 +1,5 @@
-﻿using GSL.Cadastro.Api.Configuration.Mappers;
+﻿using FluentValidation.Results;
+using GSL.Cadastro.Api.Configuration.Mappers;
 using GSL.Cadastro.Dominio.Interfaces;
 using GSL.Cadastro.Dominio.Models.Entidades;
 using GSL.Cadastro.Dominio.Models.ViewModels;
@@ -183,14 +184,22 @@ namespace GSL.Cadastro.Api.Controllers
         }
 
         [HttpPost("entrar")]
-        [ProducesResponseType(typeof(LoginViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(UsuarioViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         public async Task<IActionResult> Login([FromBody] LoginViewModel usuarioViewModel)
         {
             // Rota de Login está mocada, pois não iremos implementar pra demonstração dessa POC.
-            return CustomResponse(usuarioViewModel);
+            var usuario = await _usuarioRepository.ObterPorEmailAsync(usuarioViewModel.Email);
+            if (usuario == null)
+            {
+                var validationResult = new ValidationResult();
+                validationResult.Errors.Add(new ValidationFailure(null, "Usuario não encontrado"));
+                return CustomResponse(validationResult);
+            }
+
+            return CustomResponse(MapperUtil.MapperUsuarioToUsuarioViewModel(usuario));
         }
     }
 }

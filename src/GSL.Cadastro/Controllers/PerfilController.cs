@@ -86,10 +86,14 @@ namespace GSL.Cadastro.Api.Controllers
                 "Fornecedor"
                 ));
 
-
+            var perfil3 = MapperUtil.MapperPerfilViewModelToPerfil(new PerfilViewModel(
+                Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096123"),
+                "Colaborador"
+                ));
 
             await _perfilRepository.AdicionarAsync(perfil);
             await _perfilRepository.AdicionarAsync(perfil2);
+            await _perfilRepository.AdicionarAsync(perfil3);
 
             return CustomResponse(MapperUtil.MapperPerfilToPerfilViewModel(perfil));
         }

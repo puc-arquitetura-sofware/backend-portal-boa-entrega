@@ -12,6 +12,7 @@ namespace GSL.Cadastro.Dominio.Interfaces
         //Task AdicionarAsync(Usuario usuario);
         //Task<IEnumerable<Usuario>> ObterTodosAsync();
         Task<Usuario> ObterPorCpfAsync(string cpf);
+        Task<Usuario> ObterPorEmailAsync(string email);
         Task AdicionarEnderecoAsync(Endereco endereco);
         Task<Endereco> ObterEnderecoPorUsuarioIdAsync(Guid id);
     }

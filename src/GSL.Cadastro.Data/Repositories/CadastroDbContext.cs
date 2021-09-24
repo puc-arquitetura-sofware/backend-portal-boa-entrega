@@ -49,5 +49,6 @@ namespace GSL.Cadastro.Data.Repositories
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CadastroDbContext).Assembly);
         }
 
+     
     }
 }
