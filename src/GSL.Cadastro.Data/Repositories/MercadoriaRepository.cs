@@ -31,14 +31,14 @@ namespace GSL.Cadastro.Data.Repositories
             return result;
         }
 
-        public async Task<IEnumerable<Mercadoria>> ObterPorDepositoIdAsync(Guid depositoId)
+        public async Task<IEnumerable<MercadoriaDeposito>> ObterPorDepositoIdAsync(Guid depositoId)
         {
 
             var result = await _context.MercadoriaDepositos
                 .Include(m => m.Mercadoria)
                 .AsNoTracking()
                 .Where(x => x.DepositoId == depositoId)
-                .Select(m => m.Mercadoria)
+                .Select(m => m)
                 .ToListAsync();
 
 

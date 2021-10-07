@@ -8,13 +8,14 @@ namespace GSL.Cadastro.Dominio.Models.ViewModels
 {
     public class MercadoriaViewModel
     {
-        public MercadoriaViewModel(string nome, string descricao, double valor, bool ativo, Guid funcionarioId)
+        public MercadoriaViewModel(string nome, string descricao, double valor, bool ativo, Guid funcionarioId, int quantidadeEstoque)
         {
             Nome = nome;
             Descricao = descricao;
             Valor = valor;
             Ativo = ativo;
             FuncionarioId = funcionarioId;
+            QuantidadeEstoque = quantidadeEstoque;
         }
 
         public Guid Id { get; set; }
@@ -23,7 +24,7 @@ namespace GSL.Cadastro.Dominio.Models.ViewModels
         public double Valor { get; set; }
         public bool Ativo { get; set; }
         public Guid FuncionarioId { get;  set; }
-
+        public int QuantidadeEstoque { get; set; }
 
     }
 }

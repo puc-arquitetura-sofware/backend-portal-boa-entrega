@@ -84,8 +84,11 @@ namespace GSL.Cadastro.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         public async Task<IActionResult> ObterMercadoriaPorDepositoId([FromQuery] Guid depositoId)
         {
-            var mercadoria = await _mercadoriaRepository.ObterPorDepositoIdAsync(depositoId);
-            return mercadoria == null ? NotFound() : CustomResponse(mercadoria);
+            var mercadoriaDeposito = await _mercadoriaRepository.ObterPorDepositoIdAsync(depositoId);
+
+            var mercadoriasViewModel = mercadoriaDeposito.Select(x => MapperUtil.MapperMercadoriaToMercadoriaViewModel(x.Mercadoria, x.QuantidadeEstoque ));
+
+            return mercadoriaDeposito == null ? NotFound() : CustomResponse(mercadoriasViewModel);
         }
 
         [HttpGet("obter-por-cliente")]

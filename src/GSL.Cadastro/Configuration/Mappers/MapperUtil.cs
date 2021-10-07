@@ -55,9 +55,9 @@ namespace GSL.Cadastro.Api.Configuration.Mappers
             return mercadoria;
         }
 
-        public static MercadoriaViewModel MapperMercadoriaToMercadoriaViewModel(Mercadoria mercadoria)
+        public static MercadoriaViewModel MapperMercadoriaToMercadoriaViewModel(Mercadoria mercadoria, int quantidadeEstoque = 0)
         {
-            var mercadoriaViewModel = new MercadoriaViewModel(mercadoria.Nome, mercadoria.Descricao, mercadoria.Valor, mercadoria.Ativo, mercadoria.FornecedorId);
+            var mercadoriaViewModel = new MercadoriaViewModel(mercadoria.Nome, mercadoria.Descricao, mercadoria.Valor, mercadoria.Ativo, mercadoria.FornecedorId, quantidadeEstoque);
             mercadoriaViewModel.Id = mercadoria.Id;
             return mercadoriaViewModel;
         }

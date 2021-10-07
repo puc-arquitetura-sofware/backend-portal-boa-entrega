@@ -130,6 +130,7 @@ namespace GSL.Cadastro.Api.Controllers
                 Guid.Parse("6fa163ae-dc8a-481e-a829-3ecd0b096123"),
                 Guid.Parse("84b3003d-a0f7-49bc-bb18-45a8d4269f27")
             ));
+
         }
 
         private async Task adicionarMercadorias()
@@ -159,15 +160,15 @@ namespace GSL.Cadastro.Api.Controllers
         private async Task vincularDepositoMercadorias()
         {
             await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf29"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 30));
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf30"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 30));
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf31"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 30));
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf32"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 30));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf30"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 12));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf31"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 65));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf32"), Guid.Parse("4DF14C90-1F4E-4984-B745-B6ADCCAB5F20"), 11));
 
 
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf29"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 30));
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf30"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 30));
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf31"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 30));
-            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf32"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 30));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf29"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 21));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf30"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 33));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf31"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 86));
+            await _mercadoriaDepositoRepository.AdicionarAsync(new MercadoriaDeposito(Guid.Parse("9f86f90b-775e-425f-9f15-4d6f3985bf32"), Guid.Parse("41B98488-F609-4AE7-8147-E598D0C1F4BC"), 13));
 
         }
 
